@@ -12,10 +12,10 @@ $(document).ready(function(){
         'cognome': 'De Vito',
         'eta': '32'
     };
-
+        console.log('Studente Principale');
     for (var key in studente) {
-        console.log(studente);
-        console.log(studente[key]);
+        console.log(key + ' : ' + studente[key]);
+        // console.log(studente[key]);
     }
 
     var studenti = [
@@ -26,9 +26,9 @@ $(document).ready(function(){
             'eta': '35'
         },
         {
-            'nome': 'Giorgia',
-            'cognome': 'Colagrande',
-            'eta': '30'
+            'nome': 'Giorgio',
+            'cognome': 'Agostinelli',
+            'eta': '38'
         },
         {
             'nome': 'Roberto',
@@ -36,11 +36,30 @@ $(document).ready(function(){
             'eta': '56'
         }
     ];
+    console.log('Lista Studenti');
 
-    for (var chiave in studenti) {
-        // console.log(studenti);
-        // console.log(studenti);
+    for (var i = 0; i < studenti.length; i++) {
+
+        var studente_corrente = studenti[i];
+
+        var nome_studente_attuale = studente_corrente.nome;
+
+        var cognome_studente_attuale = studente_corrente.cognome;
+
+        var eta_studente_attuale = studente_corrente.eta;
+
+        for (var key in studente_corrente) {
+
+            if (key != 'eta') {
+                // console.log(studente_corrente[key]);
+                console.log(key + ' : ' + studente_corrente[key]);
+            }
+
+        }
     }
+
+
+
 
     var nome_studente = prompt('Inserisci il nome dello studente');
     var cognome_studente = prompt('Inserisci il cognome dello studente');
@@ -53,6 +72,7 @@ $(document).ready(function(){
         'cognome': cognome_studente,
         'eta': eta_studente
     }
+
 
     studenti.push(nuovo_studente);
     console.log(studenti);
