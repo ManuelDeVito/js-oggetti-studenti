@@ -38,8 +38,8 @@ $(document).ready(function(){
     ];
 
     for (var chiave in studenti) {
-        console.log(studenti);
-        console.log(studenti);
+        // console.log(studenti);
+        // console.log(studenti);
     }
 
     var nome_studente = prompt('Inserisci il nome dello studente');
@@ -49,11 +49,13 @@ $(document).ready(function(){
 
 
     var nuovo_studente = {
-        'nome': 'Marco',
-        'cognome': 'Russano',
-        'eta': '56'
+        'nome': nome_studente,
+        'cognome': cognome_studente,
+        'eta': eta_studente
     }
+
     studenti.push(nuovo_studente);
+    console.log(studenti);
 
 
 
