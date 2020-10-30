@@ -46,12 +46,15 @@ $(document).ready(function(){
     var cognome_studente = prompt('Inserisci il cognome dello studente');
     var eta_studente = prompt('Inserisci l\'eta dello studente');
 
-    nuovo_studente.push(nome_studente + cognome_studente + eta_studente)
-
-    var nuovo_studente = [
 
 
-    ]
-    console.log(nuovo_studente);
+    var nuovo_studente = {
+        'nome': 'Marco',
+        'cognome': 'Russano',
+        'eta': '56'
+    }
+    studenti.push(nuovo_studente);
+
+
 
 })
